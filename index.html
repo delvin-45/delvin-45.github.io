@@ -177,41 +177,39 @@
             <!-- DIAGRAM -->
             <section id="diagram" class="content-section full-width-bg">
                 <div class="diagram-wrapper">
-                    <h3 class="diagram-title">Arsitektur Ekosistem IT Terintegrasi</h3>
-                    <div class="architecture-diagram">
-                        <!-- Enterprise Level -->
-                        <div class="level level-enterprise">
-                            <span class="level-label">BUSINESS LAYER</span>
-                            <div class="box-content">
-                                <strong>IT ENTERPRISE</strong>
-                                <span>ERP • CRM • SCM • BI</span>
+                    <h3 class="diagram-title">Visualisasi Ekosistem Terintegrasi</h3>
+
+                    <!-- NEW STRUCTURE: Parent Container handles the Border -->
+                    <div class="diagram-security-boundary">
+                        <div class="security-label-top">🛡️ SECURITY PERIMETER (CIA TRIAD)</div>
+
+                        <div class="diagram-stack">
+                            <!-- Enterprise Level -->
+                            <div class="level level-enterprise">
+                                <span class="level-label">BUSINESS LAYER</span>
+                                <div class="box-content">
+                                    <strong>IT ENTERPRISE</strong>
+                                    <span>ERP • CRM • SCM • BI</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Connector -->
-                        <div class="connector">
-                            <span class="arrow-text">Requirements & Data Flow</span>
-                            <div class="arrow-line"></div>
-                        </div>
-
-                        <!-- Infrastructure Level -->
-                        <div class="level level-infra">
-                            <span class="level-label">INFRASTRUCTURE LAYER</span>
-                            <div class="box-content">
-                                <strong>IT INFRASTRUCTURE</strong>
-                                <span>Servers • Network • Hybrid Cloud • Database</span>
+                            <!-- Connector -->
+                            <div class="connector-vertical">
+                                <span class="connector-arrow">⬇</span>
                             </div>
-                        </div>
 
-                        <!-- Security Layer (Side Overlay) -->
-                        <div class="security-shield">
-                            <div class="shield-content">
-                                <strong>SECURITY LAYER (CIA)</strong>
-                                <span>Confidentiality • Integrity • Availability</span>
+                            <!-- Infrastructure Level -->
+                            <div class="level level-infra">
+                                <span class="level-label">INFRASTRUCTURE LAYER</span>
+                                <div class="box-content">
+                                    <strong>IT INFRASTRUCTURE</strong>
+                                    <span>Server • Network • Cloud DB</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <p class="diagram-caption">Gambar 1.1: Model Lapisan Abstraksi IT dalam Organisasi</p>
+
+                    <p class="diagram-caption">Gambar 1.1: Security Layer membungkus Enterprise & Infrastructure</p>
                 </div>
             </section>
 
@@ -243,7 +241,7 @@
     </main>
 
     <script>
-        // Simple Intersection Observer for fade-in effect on scroll
+        // Simple Intersection Observer for fade-in effect
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
