@@ -53,8 +53,13 @@ body.light-mode .footer-subtitle {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    cursor: none;
-    /* Hide default cursor */
+}
+
+@media (hover: hover) and (pointer: fine) {
+    * {
+        cursor: none;
+        /* Hide default cursor only on PC */
+    }
 }
 
 body {
@@ -65,7 +70,6 @@ body {
     line-height: 1.6;
 }
 
-/* Custom Cursor */
 .cursor-dot,
 .cursor-outline {
     position: fixed;
@@ -75,6 +79,17 @@ body {
     border-radius: 50%;
     z-index: 9999;
     pointer-events: none;
+    display: none;
+    /* Hidden by default */
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .cursor-dot,
+    .cursor-outline {
+        display: block;
+        /* Show only on PC */
+    }
 }
 
 .cursor-dot {
@@ -370,6 +385,14 @@ a:hover {
     justify-content: center;
     align-items: center;
     transition: var(--transition);
+    pointer-events: all;
+    /* Default blockage */
+}
+
+.loader-hidden {
+    opacity: 0;
+    pointer-events: none !important;
+    /* Allow clicks through when hidden */
 }
 
 .loader-content {

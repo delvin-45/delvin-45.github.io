@@ -41,11 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById('loader-wrapper');
     if (loader) {
         setTimeout(() => {
-            loader.style.opacity = '0';
+            loader.classList.add('loader-hidden'); // CSS handles opacity and pointer-events
             setTimeout(() => {
                 loader.style.display = 'none';
             }, 500);
-        }, 1500); // Fake load time for effect
+        }, 1000); // Reduced wait time
     }
 
     /* -----------------------------------------------
