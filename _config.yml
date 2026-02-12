@@ -7,7 +7,7 @@ github_username:  "cyberintel"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
-gems:
+plugins:
   - jekyll-feed
   - jekyll-seo-tag
 exclude:
