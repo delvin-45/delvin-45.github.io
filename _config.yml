@@ -1,0 +1,15 @@
+title: "Delvin.io | Cyber Intelligence"
+description: "Strategic analysis on enterprise IT, infrastructure resilience, and digital risk."
+url: "https://delvin.io"
+baseurl: "" # Keep empty for root domain
+twitter_username: "cyberintel"
+github_username:  "cyberintel"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
